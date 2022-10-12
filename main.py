@@ -10,12 +10,9 @@ else:
 print('Задача 7. Напишите программу для проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.')
 print('Вариант решения с тремя циклами.')
 # В самом конце добавила попытку решения через 1 цикл, но в нем есть какая-то ошибка.
-for i in [True, False]:
-    x = i
-    for j in [True, False]:
-        y = j
-        for k in [True, False]:
-            z = k
+for x in [True, False]:
+    for y in [True, False]:
+        for z in [True, False]:
             right = not(x or y or z)
             left = not x and not y and not z
             result = left == right
